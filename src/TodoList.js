@@ -1,7 +1,10 @@
 import React from 'react'
+import DataLoop from './DataLoop'
 
-export default function TodoList() {
+export default function TodoList({ todos }){
   return (
-    <div>TodoList</div>
+    todos.map( todo => {
+      return <DataLoop key={todo} todo={todo} />
+    })
   )
 }
